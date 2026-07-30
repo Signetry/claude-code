@@ -2,6 +2,8 @@
 
 **Govern Claude Code's changes in real time — with signed receipts.**
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 The Claude Code plugin for [umbra-core](https://github.com/bkd-dotcom/umbra-core):
 Umbra decides how much authority an agent's change has earned and proves it. This
 plugin brings that governance *inside Claude Code* — enforced by deterministic
