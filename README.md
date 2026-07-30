@@ -9,7 +9,7 @@ code, never by the model itself (an agent can't approve its own change).
 
 Part of the [Umbra platform](https://github.com/bkd-dotcom/umbra-umbrella).
 
-> Prerequisite: `pip install "umbra-core>=0.3.0"` and a `.umbra/admission.yaml` in
+> Prerequisite: `pip install "umbra-core>=0.5.0"` and a `.umbra/admission.yaml` in
 > your repo (a conservative default applies without one).
 
 ## What it does
@@ -41,6 +41,19 @@ Or test locally: `claude --plugin-dir ./umbra`
 - `umbra/scripts/umbra-mcp.sh` — launches the Umbra MCP server
 - `umbra/skills/admit/SKILL.md` — the `/umbra:admit` skill
 - `umbra/.mcp.json` — MCP server registration
+
+## Scan & fix (from the same `umbra-core`)
+
+Beyond the editor guard, `umbra-core` can find vulnerabilities and govern the fix:
+
+```bash
+umbra scan .                 # SAST over the repo (7 languages, SARIF), offline & free
+umbra scan . --fix --fix-agent claude-code   # draft a governed fix → admission → signed receipt
+```
+
+`--fix` is **bring-your-own-key** (your `ANTHROPIC_API_KEY`, never shared, redacted
+from every artifact) and opens **branch-only** PRs — never merges. See
+[umbra-core: AUTOFIX_SETUP.md](https://github.com/bkd-dotcom/umbra-core/blob/main/docs/AUTOFIX_SETUP.md).
 
 ## Guarantees
 
