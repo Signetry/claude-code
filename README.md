@@ -1,8 +1,11 @@
 # umbra-claude-code
 
+> **Copyright (c) 2026 Binay Dalai. All rights reserved.**
+> This repository is strictly for viewing and contributing to the original project. You may not use, copy, modify, distribute, or commercialize this code for your own personal or commercial projects without explicit written permission. Only the original author retains the right to use and monetize this project.
+
+
 **Govern Claude Code's changes in real time — with signed receipts.**
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 The Claude Code plugin for [umbra-core](https://github.com/bkd-dotcom/umbra-core):
 Umbra decides how much authority an agent's change has earned and proves it. This
@@ -68,4 +71,4 @@ See [SECURITY.md](SECURITY.md) · [PRIVACY.md](PRIVACY.md) ·
 
 ## License
 
-[MIT](LICENSE) © 2026 Binay Dalai.
+**Copyright (c) 2026 Binay Dalai. All rights reserved.** This code is not open source. You may not use, copy, modify, distribute, or commercialize it for your own personal or commercial purposes without explicit written permission from the author, who alone retains the right to use and monetize this project. See [CONTRIBUTING.md](CONTRIBUTING.md).
