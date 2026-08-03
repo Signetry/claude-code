@@ -14,7 +14,7 @@ code, never by the model itself (an agent can't approve its own change).
 
 Part of the [Umbra platform](https://github.com/bkd-dotcom/umbra-umbrella).
 
-> Prerequisite: `pip install "umbra-core>=0.5.0"` and a `.umbra/admission.yaml` in
+> Prerequisite: `pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.3"` and a `.umbra/admission.yaml` in
 > your repo (a conservative default applies without one).
 
 ## What it does
