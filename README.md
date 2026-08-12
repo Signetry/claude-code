@@ -7,14 +7,14 @@
 **Govern Claude Code's changes in real time — with signed receipts.**
 
 
-The Claude Code plugin for [umbra-core](https://github.com/bkd-dotcom/umbra-core):
+The Claude Code plugin for [umbra-core](https://github.com/Signetry/core):
 Umbra decides how much authority an agent's change has earned and proves it. This
 plugin brings that governance *inside Claude Code* — enforced by deterministic
 code, never by the model itself (an agent can't approve its own change).
 
-Part of the [Umbra platform](https://github.com/bkd-dotcom/umbra-umbrella).
+Part of the [Umbra platform](https://github.com/Signetry/signetry).
 
-> Prerequisite: `pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.4"` and a `.umbra/admission.yaml` in
+> Prerequisite: `pip install "umbra-core @ git+https://github.com/Signetry/core@v0.5.4"` and a `.umbra/admission.yaml` in
 > your repo (a conservative default applies without one).
 
 ## What it does
@@ -58,7 +58,7 @@ umbra scan . --fix --fix-agent claude-code   # draft a governed fix → admissio
 
 `--fix` is **bring-your-own-key** (your `ANTHROPIC_API_KEY`, never shared, redacted
 from every artifact) and opens **branch-only** PRs — never merges. See
-[umbra-core: AUTOFIX_SETUP.md](https://github.com/bkd-dotcom/umbra-core/blob/main/docs/AUTOFIX_SETUP.md).
+[umbra-core: AUTOFIX_SETUP.md](https://github.com/Signetry/core/blob/main/docs/AUTOFIX_SETUP.md).
 
 ## Guarantees
 
@@ -67,7 +67,7 @@ from every artifact) and opens **branch-only** PRs — never merges. See
 - Governance logic lives in `umbra-core`; this plugin never reimplements policy.
 
 See [SECURITY.md](SECURITY.md) · [PRIVACY.md](PRIVACY.md) ·
-[umbrella overview](https://github.com/bkd-dotcom/umbra-umbrella).
+[umbrella overview](https://github.com/Signetry/signetry).
 
 ## License
 

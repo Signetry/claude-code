@@ -7,7 +7,7 @@ Follows [Keep a Changelog](https://keepachangelog.com/) / [SemVer](https://semve
 ### Added
 
 - Split out of the `umbra-plugins` monorepo into a dedicated repository under the
-  [Umbra umbrella](https://github.com/bkd-dotcom/umbra-umbrella), per the platform
+  [Umbra umbrella](https://github.com/Signetry/signetry), per the platform
   architecture (one repo per integration).
 - Pins `umbra-core>=0.3.0` (capability graph, plan binding, masked verifier,
   G1/G2/G3 gates, extension admission).
