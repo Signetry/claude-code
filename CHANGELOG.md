@@ -13,7 +13,7 @@ Follows [Keep a Changelog](https://keepachangelog.com/) / [SemVer](https://semve
   references to it use the Signetry name.
 - Pinned `signetry-core[...] @ git+https://github.com/Signetry/core@v0.6.0`
   and the advisory reviewer to
-  `signetry-reviewer @ git+https://github.com/Signetry/reviewer@v0.6.0`.
+  `signetry-reviewer @ git+https://github.com/Signetry/reviewer@v0.1.2`.
 
 ## [0.3.0] — 2026-07-26
 
