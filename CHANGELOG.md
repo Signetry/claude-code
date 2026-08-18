@@ -4,6 +4,14 @@ Follows [Keep a Changelog](https://keepachangelog.com/) / [SemVer](https://semve
 
 ## [Unreleased]
 
+### Fixed — the plugin declared the wrong license
+
+- `signetry/.claude-plugin/plugin.json` declared `"license": "MIT"` while the
+  project is **All Rights Reserved**. Left as-is, the plugin directory arguably
+  shipped under MIT terms — i.e. granted rights the rest of the project reserves.
+  Now `"Proprietary — All Rights Reserved"`, matching `signetry-core`'s
+  `pyproject.toml`.
+
 ### Changed
 
 - Signetry naming throughout: the CLI is `signetry`; env vars use the
