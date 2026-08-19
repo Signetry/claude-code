@@ -14,7 +14,7 @@ code, never by the model itself (an agent can't approve its own change).
 
 Part of the [Signetry platform](https://github.com/Signetry/signetry).
 
-> Prerequisite: `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.6.0"` and a `.signetry/admission.yaml` in
+> Prerequisite: `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.7.0"` and a `.signetry/admission.yaml` in
 > your repo (a conservative default applies without one).
 
 ## What it does
