@@ -13,7 +13,7 @@ code, never by the model itself (an agent can't approve its own change).
 
 Part of the [Signetry platform](https://github.com/Signetry/signetry).
 
-> Prerequisite: `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.7.0"` and a `.signetry/admission.yaml` in
+> Prerequisite: `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.8.0"` and a `.signetry/admission.yaml` in
 > your repo (a conservative default applies without one).
 
 ## What it does
@@ -32,7 +32,7 @@ out-of-scope or forbidden actions before they happen — using `signetry guard`
 ## Install
 
 ```
-/plugin marketplace add bkd-dotcom/signetry-claude-code
+/plugin marketplace add Signetry/claude-code
 /plugin install signetry@signetry-claude-code
 ```
 

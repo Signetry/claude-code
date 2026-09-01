@@ -2,7 +2,19 @@
 
 Follows [Keep a Changelog](https://keepachangelog.com/) / [SemVer](https://semver.org/).
 
-## [Unreleased]
+## [0.4.0] — 2026-09-01
+
+> First release **tagged in this repository**. The `0.3.0` entry below describes a
+> release cut in the pre-move repo, whose tag did not survive the org move.
+
+### Fixed — the documented install command pointed at a 404
+
+- `README.md` told Claude Code users to run
+  `/plugin marketplace add bkd-dotcom/signetry-claude-code`. That repository has not
+  existed since the move to the `Signetry` org, so the plugin's primary install path
+  could not work for anyone. Now `Signetry/claude-code`.
+- The marketplace *name* in `/plugin install signetry@signetry-claude-code` is
+  unchanged and correct — it comes from `marketplace.json`'s `name`, not the repo path.
 
 ### Changed — the project is now open source (Apache-2.0)
 
@@ -49,9 +61,9 @@ Follows [Keep a Changelog](https://keepachangelog.com/) / [SemVer](https://semve
   `signetry_core`; and shell functions use the `signetry_*` prefix.
 - The `signetry/` plugin asset directory (hooks, skills, scripts) and all
   references to it use the Signetry name.
-- Pinned `signetry-core[...] @ git+https://github.com/Signetry/core@v0.6.0`
+- Pinned `signetry-core[...] @ git+https://github.com/Signetry/core@v0.8.0`
   and the advisory reviewer to
-  `signetry-reviewer @ git+https://github.com/Signetry/reviewer@v0.1.2`.
+  `signetry-reviewer @ git+https://github.com/Signetry/reviewer@v0.3.0`.
 
 ## [0.3.0] — 2026-07-26
 
