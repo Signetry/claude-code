@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security vulnerability (private)
+    url: https://github.com/Signetry/claude-code/security/advisories/new
+    about: Please report vulnerabilities privately — do not open a public issue.
+  - name: Governance logic (signetry-core)
+    url: https://github.com/Signetry/core/issues
+    about: Bugs in the contract, guard decisions, verifier, receipts, or pipeline belong in signetry-core.
+  - name: Platform overview and licensing
+    url: https://github.com/Signetry/signetry
+    about: How the pieces fit together, and the open-core licensing model.

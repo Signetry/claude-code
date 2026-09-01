@@ -1,0 +1,76 @@
+name: Bug report
+description: Report a problem with the Signetry Claude Code plugin.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For **security vulnerabilities** do NOT use this form — see
+        [SECURITY.md](https://github.com/Signetry/claude-code/security/policy).
+        Governance-logic bugs (contract evaluation, guard decisions, verifier,
+        receipts) belong in [signetry-core](https://github.com/Signetry/core/issues) —
+        this plugin never reimplements policy, it pins `signetry-core`.
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      description: From `signetry/.claude-plugin/plugin.json`, or the branch/commit you loaded.
+      placeholder: "0.3.0"
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Claude Code version, and the output of `python3 --version`.
+      placeholder: "macOS 15.3 · Claude Code 2.1.0 · Python 3.12.4"
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which part misbehaved
+      options:
+        - PreToolUse guard (signetry-guard.sh)
+        - SessionStart hook / activation (signetry-session-start.sh)
+        - Python/venv resolution (signetry-lib.sh)
+        - MCP server (signetry-mcp.sh)
+        - /signetry:admit skill
+        - Plugin install / marketplace manifest
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: |
+        Expected vs actual. If the guard allowed something it should have blocked (or
+        blocked something it should have allowed), say which file path or command, and
+        include the relevant part of your `.signetry/admission.yaml`.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: |
+        Ideally reproduce it through the real hook without an interactive session:
+        `bash demos/try-guard.sh`, or pipe the tool-call JSON straight in —
+        `printf '%s' '{"tool_name":"Write","tool_input":{"file_path":"deploy.yml"}}' | bash signetry/hooks/signetry-guard.sh`
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Hook output / session transcript
+      description: The SessionStart status line and any hook output. Redact secrets and paths you would rather not share.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: The SessionStart line said Signetry was **active** (not `INACTIVE`) when this happened.
+        - label: I confirmed the same behaviour is not already fixed on `main`.
