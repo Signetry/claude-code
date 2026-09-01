@@ -1,0 +1,64 @@
+name: Feature request
+description: Suggest an improvement to the Signetry Claude Code plugin.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is the **Claude Code integration surface**: the hooks, the
+        hook matchers, Python/venv resolution, the MCP launcher, the
+        `/signetry:admit` skill, and the manifests.
+
+        Changes to the governance logic itself — what a contract can express, how
+        authority is earned, the verifier, receipt signing — belong in
+        [signetry-core](https://github.com/Signetry/core/issues).
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and where does the plugin get in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like to happen
+      description: If it affects a hook, a matcher, or a manifest field, say which.
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which part would change
+      options:
+        - PreToolUse guard (signetry-guard.sh)
+        - SessionStart hook / activation (signetry-session-start.sh)
+        - Hook matchers or timeouts (hooks.json)
+        - Python/venv resolution (signetry-lib.sh)
+        - MCP server (signetry-mcp.sh)
+        - /signetry:admit skill
+        - Plugin install / marketplace manifest
+        - Docs
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: Including whether your repo's `.signetry/admission.yaml` could already express this.
+  - type: checkboxes
+    id: invariants
+    attributes:
+      label: Invariants this preserves
+      description: The plugin holds these regardless of configuration. Confirm your proposal does not break them.
+      options:
+        - label: The decision stays deterministic — the model never approves its own change.
+        - label: Admission still fails **closed**; the soft guard may fail open only with a loud `INACTIVE`.
+        - label: "`auto_merge` stays false — a human merges."
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contributing
+      options:
+        - label: I would be willing to open a PR for this (see [CONTRIBUTING.md](https://github.com/Signetry/claude-code/blob/main/CONTRIBUTING.md)).
